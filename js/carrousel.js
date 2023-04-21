@@ -66,6 +66,7 @@ function ajouter_un_radio_bouton_dans_carrousel()
 function affiche_image_carrousel(){
    if (ancienIndex != -1){
       carrousel__figure.children[ancienIndex].style.opacity = "0"
+    //carrousel__form.children[ancienIndex].checked = false
       //carrousel__figure.children[ancienIndex].classList.remove('carrousel__img--activer')
      }
      //console.log(this.dataset.index)
