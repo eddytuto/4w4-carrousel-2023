@@ -11,8 +11,10 @@
    let galerie__img = galerie.querySelectorAll('img')
 
    carrousel__ouvrir.addEventListener('mousedown', function(){
+      index=0
+
       carrousel.classList.add('carrousel--activer')
-      ajouter_les_images_de_galerie()
+      affiche_image_carrousel()
    })
 
    carrousel__x.addEventListener('mousedown', function(){
@@ -24,14 +26,24 @@
 let position = 0
 let index = 0
 let ancienIndex = -1
-function ajouter_les_images_de_galerie()
-{
-
+/* -- boucle qui permet construire le carrousel */
    for (const elem of galerie__img){
+      elem.dataset.index = position
+      /* en cliquant sur une image de la galerie */
+      elem.addEventListener('mousedown', function(e){
+         /*
+         avant d'ouvrir la boîte modale il faut vérifier si elle n'est pas déjà ouverte
+         https://www.javascripttutorial.net/dom/css/check-if-an-element-contains-a-class/
+
+         la fonction contains() vous permettra de faire cette vérification
+         */
+         index = e.target.dataset.index
+         affiche_image_carrousel()
+      })
       ajouter_une_image_dans_courrousel(elem)
       ajouter_un_radio_bouton_dans_carrousel()
    }
-}
+
 
 /**
  * Création dynamique d'une image pour le carrousel
