@@ -22,7 +22,6 @@ function mon_enqueue_css_js(){
                     array(),
                     $version_js,
                     true);
-
 }
 
 add_action('wp_enqueue_scripts', 'mon_enqueue_css_js');
