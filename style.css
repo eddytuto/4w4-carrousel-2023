@@ -47,4 +47,21 @@
 .carrousel__rad {
   display: inline-block;
   margin: 4px;
+}
+
+.carrousel__prec, .carrousel__suiv {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 50%;
+  border: 1px solid #666;
+  border-radius: 3px;
+}
+
+.carrousel__prec {
+  left: 5px;
+}
+
+.carrousel__suiv {
+  right: 5px;
 }/*# sourceMappingURL=style.css.map */
